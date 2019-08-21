@@ -1,40 +1,95 @@
-body{
-    background-color: blueviolet;
+body {
+  /*automatic styles*/
+  background-color: blueviolet;
+  padding: 0;
 }
+div#root {
+  /*from render block*/
+  display: grid;
+  grid-template-columns: 1fr;
 
-div#root{
-    display: grid;
-    grid-template-columns: 1fr;
-
-    grid-template-rows:
-    minmax(1vh, auto)
+  grid-template-rows:
+    minmax(85px, auto)
     minmax(1vh, auto)
     minmax(auto, auto)
     minmax(50px, auto);
 
-    grid-template-areas:
+  grid-template-areas:
     "header"
     "navigation"
     "main"
     "footer";
 }
 
-header{
-    grid-area: header;
-    background-color:green;
+header {
+  /*header styles*/
+  position: relative;
 
-    display: flex;
-    flex-direction: row;
+  grid-area: header;
+  background-color: green;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-nav{
-    grid-area: navigation;
-    background-color: aqua;
+header > div {
+  background-color: red;
 }
-main{
-    grid-area: main;
-    background-color:yellow;
+header>div#logo{
+  font-family: sans-serif;
 }
-footer{
-    grid-area: footer;
-    background-color:red;
+header > div:last-child {
+  position: absolute;
+  right: 0;
+}
+header > div:last-child > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+}
+
+nav {
+  /*nav styles*/
+  grid-area: navigation;
+  background-color: aqua;
+}
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  justify-content: space-evenly;
+}
+
+main {
+  /*main styles*/
+  grid-area: main;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+div.stockItem {
+  background-color: wheat;
+  height: 200px;
+  width: 400px;
+  margin: 1%;
+}
+.stockItem > div {
+  display: inline-block;
+}
+
+footer {
+  /*footer styles*/
+  grid-area: footer;
+  background-color: red;
+}
+
+@media screen and (max-width:414px){
+  div.stockItem{
+      width: 100vw;
+      height: 50vw;/*This is to maintain aspect ratio of the div - intentional*/
+  }
 }

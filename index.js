@@ -4,7 +4,6 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 
 import Navigo from 'navigo';
-import axios from 'axios';
 
 const router = new Navigo(location.origin);
 
@@ -14,7 +13,20 @@ const store = {
             'primary': [ 'Home' ]
         },
         'title': 'Home',
-        'page': `<p>home page</p>`
+        'store': [
+            {
+                'Id': '6f40965ae02e5f4d59389cedcfeec08c',
+                'name': 'Karen Scott',
+                'price': '$30.00',
+                'description': 'lorem ipsum dolor sit amet consectiur adpecing elit'
+            },
+            {
+                'Id': '601159ddcd58ee6bf2ebdf61ed997e6f',
+                'name': 'Jacket',
+                'price': '$50.00',
+                'description': 'filler text'
+            }
+        ]
     }
 };
 
@@ -28,7 +40,7 @@ function render(state){
 
     router.updatePageLinks();
 }
-/*
+
 router
     .on(':view', (params) => {
         render(store[params.view]);
@@ -36,4 +48,4 @@ router
     .on('/', () => {
         render(store.home);
     })
-    .resolve();*/
+    .resolve();

@@ -1,10 +1,13 @@
 export default (state) => `
+
 <header>
-  <div>
-    <div class="title">
-      <h1>${state.title}</h1>
-      <h2>Hunter Hodge</h2>
-    </div>
-  </div>
+<div id='headerLogo'><h1>Houndstooth Vintage</h1></div>
+<div>
+    <ul>
+        <li>cart</li>
+        <li>login</li>
+        <li>search</li>
+    </ul>
+</div>
 </header>
 `;
