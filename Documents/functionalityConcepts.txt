@@ -1,8 +1,0 @@
-https://trello.com/b/cuDmWa0M/hunter-hodge-capstone
-
-Page layout is to be built as a grid
-Navigation is to be a flexbox
-On mobile sizing turn search box into a button
-product boxes will be in a flexbox
-product boxes will expand to become the page and give more information on click
-products will be pulled from an external file containing only an object with product information
