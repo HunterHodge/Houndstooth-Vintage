@@ -13,7 +13,7 @@ const store = {
             'primary': [ 'Home' ]
         },
         'title': 'Home',
-        'store': [
+        'products': [
             {
                 'Id': '6f40965ae02e5f4d59389cedcfeec08c',
                 'name': 'Karen Scott',

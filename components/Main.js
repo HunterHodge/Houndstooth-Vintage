@@ -16,6 +16,6 @@ function stockBuilder(stockItems){
 
 export default (state) => `
 <main>
-    ${stockBuilder(state.store)}
+    ${stockBuilder(state.products)}
 </main>
 `;
