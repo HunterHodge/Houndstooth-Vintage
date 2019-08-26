@@ -1,6 +1,7 @@
-function stockBuilder(stockItems){
-    return stockItems.map((item) => {
-        return `
+function stockBuilder(stockItems) {
+  return stockItems
+    .map(item => {
+      return `
         <div class='stockItem'>
             <a href="./stock/${item.Id}data-navigo${item.Id}>
                 <div><img src='http://images.pixieset.com/68114502/${item.image}-large.jpg></div>
@@ -11,10 +12,11 @@ function stockBuilder(stockItems){
                 </div>
             </a>
         </div>`;
-    }).join('');
+    })
+    .join("");
 }
 
-export default (state) => `
+export default state => `
 <main>
     ${stockBuilder(state.products)}
 </main>
