@@ -15,16 +15,18 @@ const store = {
     title: "Home",
     products: [
       {
-        Id: "6f40965ae02e5f4d59389cedcfeec08c",
+        id: "6f",
         name: "Karen Scott",
         price: "$30.00",
-        description: "lorem ipsum dolor sit amet consectiur adpecing elit"
+        description: "lorem ipsum dolor sit amet consectiur adpecing elit",
+        imgs: "6f.jpg"
       },
       {
-        Id: "601159ddcd58ee6bf2ebdf61ed997e6f",
+        id: "60",
         name: "Jacket",
         price: "$50.00",
-        description: "filler text"
+        description: "filler text",
+        imgs: "60.jpg"
       }
     ]
   }
