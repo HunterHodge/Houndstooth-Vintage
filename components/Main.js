@@ -4,7 +4,7 @@ function stockBuilder(stockItems) {
       return `
         <div class='stockItem'>
             <a href="./stock/${item.id}" data-navigo>
-                <figure><img src='./imgs/${item.imgs}.jpg'></figure>
+                <figure><img src="./imgs/${item.imgs}"></figure>
                 <div>
                     <h3>${item.name}</h3>
                     <h4>${item.price}</h4>
