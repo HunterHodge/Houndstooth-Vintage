@@ -16,17 +16,25 @@ const store = {
     products: [
       {
         id: "6f",
-        name: "Karen Scott",
+        name: "Plaid shirt",
         price: "$30.00",
-        description: "lorem ipsum dolor sit amet consectiur adpecing elit",
-        imgs: "6f.jpg"
+        description: "A plaid shirt with inner lining by Karen Scott",
+        imgs: "6f40965ae02e5f4d59389cedcfeec08c-large.jpg"
       },
       {
         id: "60",
         name: "Jacket",
         price: "$50.00",
-        description: "filler text",
-        imgs: "60.jpg"
+        description: "A heavy green jacket with a swirly pattern",
+        imgs: "601159ddcd58ee6bf2ebdf61ed997e6f-large.jpg"
+      },
+      {
+        id: "d0",
+        name: "Sweater",
+        price: "$30.00",
+        description:
+          "A red sleeveless sweater with a logo on the right side of the chest",
+        imgs: "d0ab37fc6366613390d25f55529b7f60-large.jpg"
       }
     ]
   }
