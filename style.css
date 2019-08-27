@@ -70,15 +70,27 @@ main {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 100vh;
 }
 div.stockItem {
   background-color: wheat;
-  height: 200px;
+  height: 154.5px;
   width: 400px;
   margin: 1%;
 }
-.stockItem > div {
-  display: inline-block;
+.stockItem > a {
+  display: flex;
+  flex-direction: row;
+}
+.stockItem figure{
+  margin: 0;
+  width: 50%;
+}
+.stockItem img {
+  width: 100%;
+}
+.stockItem div {
+  width: 50%;
 }
 
 footer {
