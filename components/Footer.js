@@ -1,3 +1,3 @@
 export default state => `
-<footer>Footer</footer>
+<footer>&copy;Houndstooth Vintage 2019</footer>
 `;
