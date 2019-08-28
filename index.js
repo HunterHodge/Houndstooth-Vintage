@@ -73,8 +73,6 @@ function render(state, data) {
       })
     );
   }
-
-  console.log(sessionStorage.cart);
 }
 
 router
