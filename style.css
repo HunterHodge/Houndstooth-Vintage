@@ -74,8 +74,8 @@ main {
 }
 div.stockItem {
   background-color: wheat;
-  height: 154.5px;
-  width: 400px;
+  height: 250px;
+  width: 500px;
   margin: 1%;
 }
 .stockItem > a {
