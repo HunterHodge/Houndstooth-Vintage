@@ -9,7 +9,7 @@ div#root {
   grid-template-columns: 1fr;
 
   grid-template-rows:
-    minmax(85px, auto)
+    minmax(50vh, auto)
     minmax(1vh, auto)
     minmax(auto, auto)
     minmax(50px, auto);
@@ -26,23 +26,27 @@ header {
   position: relative;
 
   grid-area: header;
-  background-color: green;
+  background-color: oldlace;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 header > div {
-  background-color: red;
+  background-color: oldlace;
+  align-content: center;
+  margin: auto;
 }
 header > div#logo {
   font-family: sans-serif;
 }
-
+header h1 {
+  font-size: 5em;
+}
 nav {
   /*nav styles*/
   grid-area: navigation;
-  background-color: aqua;
+  background-color: skyblue;
 }
 nav > ul {
   display: flex;
@@ -50,40 +54,67 @@ nav > ul {
   list-style: none;
   padding-left: 0;
   justify-content: space-evenly;
+  font-weight: bold;
 }
 
 main {
   /*main styles*/
   grid-area: main;
-  background-color: yellow;
+  background-color: wheat;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-content: flex-start;
   flex-wrap: wrap;
   min-height: 100vh;
 }
 div.stockItem {
   background-color: wheat;
-  height: 192px;
-  width: 500px;
-  margin: 1%;
+  width: 24.6%;
+
+  position: relative;
 }
 .stockItem > a {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .stockItem figure {
   margin: 0;
-  width: 50%;
-  height: 192px;
-}
-.stockItem img {
   width: 100%;
   height: 100%;
 }
-.stockItem div {
-  width: 50%;
+.stockItem img {
+  width: 100%;
+}
+.stockItem div.caption {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background-color: wheat;
+  height: 154px;
+}
+.cartItem{
+  display: grid;
+
+  grid-template-columns:
+  minmax(50vh, auto)
+  minmax(1vh, auto)
+  minmax(50px, auto);
+
+  grid-template-areas:
+  "name"
+  "count"
+  "price";
+  background-color: aliceblue;
+}
+.cartItem :first-child{
+  grid-area: name;
+}
+.cartItem :nth-child(2){
+  grid-area: count;
+}
+.cartItem :last-child{
+  grid-area: price;
 }
 
 footer {
@@ -97,4 +128,8 @@ footer {
     width: 100vw;
     height: 50vw; /*This is to maintain aspect ratio of the div - intentional*/
   }
+}
+
+a {
+  text-decoration: none;
 }
