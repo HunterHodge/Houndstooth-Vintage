@@ -95,4 +95,5 @@ router
   .on("/", () => {
     render(store.home, sessionStorage);
   })
+  .notFound(render(store.home, sessionStorage))
   .resolve();
