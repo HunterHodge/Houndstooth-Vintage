@@ -32,7 +32,7 @@ const sessionStorage = {
       imgs: "d0ab37fc6366613390d25f55529b7f60-large.jpg"
     }
   ],
-  cart: [{}]
+  cart: {}
 };
 
 const store = {
@@ -62,16 +62,29 @@ function render(state, data) {
 
   if (document.querySelector(".stockItem")) {
     let stockItems = document.querySelectorAll(".stockItem");
-    stockItems.forEach(
-      addEventListener("click", e => {
-        sessionStorage.cart.push(
-          e.target
-            .closest("a")
-            .getAttributeNode("href")
-            .textContent.slice(-2)
-        );
-      })
-    );
+    stockItems.forEach(i => {
+      i.addEventListener("click", e => {
+        e.preventDefault();
+        const cartUpdate = e.target
+          .closest("a")
+          .getAttributeNode("href")
+          .textContent.slice(-2);
+        if (sessionStorage.cart.hasOwnProperty(cartUpdate)) {
+          sessionStorage.cart[cartUpdate].count += 1;
+        } else {
+          sessionStorage.products.forEach(i => {
+            if (i.id === cartUpdate) {
+              sessionStorage.cart[cartUpdate] = {
+                cost: i.price,
+                name: i.name,
+                count: 1
+              };
+            }
+          });
+        }
+        console.log(sessionStorage);
+      });
+    });
   }
 }
 
