@@ -38,16 +38,6 @@ header > div {
 header>div#logo{
   font-family: sans-serif;
 }
-header > div:last-child {
-  position: absolute;
-  right: 0;
-}
-header > div:last-child > ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding-left: 0;
-}
 
 nav {
   /*nav styles*/
