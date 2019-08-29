@@ -16,8 +16,40 @@ function stockBuilder(stockItems) {
     .join("");
 }
 
-export default state => `
-<main>
-    ${stockBuilder(state.products)}
-</main>
-`;
+function listCart(cart) {
+  let ret = "";
+  Object.keys(cart).forEach(item => {
+    const obj = cart[item];
+    console.log(obj);
+    ret =
+      ret +
+      `
+    <div class = "cartItem">
+      <div>${obj.name}</div>
+      <div>${obj.count}</div>
+      <div>\$${multCost(obj.cost, obj.count)}</div>
+    </div>
+    `;
+  });
+  return ret;
+  function multCost(cost, count) {
+    return parseInt(cost.slice(1)) * count;
+  }
+}
+
+export default (state, data) => {
+  switch (state.title) {
+    case "Home":
+      return `
+    <main>
+        ${stockBuilder(data.products)}
+    </main>
+    `;
+    case "Cart":
+      return `
+    <main>
+        ${listCart(data.cart)}
+    </main>
+    `;
+  }
+};
