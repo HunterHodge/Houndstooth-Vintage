@@ -1,9 +1,1 @@
-# Houndstooth Vintage
-
-## Summary
-### A website that sells vintage clothes
-
-## Target Audience
-### Women, Marketed on Instagram
-
-[Documentation](./Documentation)
+# This repo is a failed version of a project and exists soley for me to learn from my mistakes
